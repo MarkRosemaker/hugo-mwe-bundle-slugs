@@ -1,0 +1,9 @@
+{{ with .Pages }}
+<ul>
+{{ range . }}
+	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+	{{ partial "subpages" . }}
+	</li>
+{{ end }}
+</ul>
+{{ end }}
